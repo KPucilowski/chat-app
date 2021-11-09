@@ -31,7 +31,10 @@ public class Client {
                 @Override
                 public void run() {
                     out.println(RSAutils.publicKey);
+
                     out.flush();
+
+
                     msg = sc.nextLine();
                     while(msg!=null){
                         msg = sc.nextLine();

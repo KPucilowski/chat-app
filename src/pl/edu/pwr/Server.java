@@ -48,6 +48,11 @@ class ClientThread extends Thread {
             out.flush();
 
             String key = in.readLine();
+            out.println("Podaj login:\n");
+            String login = in.readLine();
+            System.out.print(login);
+            out.flush();
+
             //  System.out.println(" klucz clienta " +clientID + " " +  key );
 
             while (true) {
