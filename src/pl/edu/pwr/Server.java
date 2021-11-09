@@ -18,7 +18,7 @@ public class Server {
         final ServerSocket serverSocket ;
         Socket clientSocket ;
         int id = 1;
-        serverSocket = new ServerSocket(5050);
+        serverSocket = new ServerSocket(5000);
         while (true)
         {
             clientSocket = serverSocket.accept();
@@ -44,8 +44,8 @@ class ClientThread extends Thread {
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             PrintWriter out = new PrintWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
 
-//            out.println(RSAutils.publicKey);
-//            out.flush();
+            out.println(RSAutils.publicKey);
+            out.flush();
 
             String key = in.readLine();
             //  System.out.println(" klucz clienta " +clientID + " " +  key );

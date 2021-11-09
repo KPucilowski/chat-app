@@ -36,11 +36,11 @@ public class Client {
                     while(msg!=null){
                         msg = sc.nextLine();
                         out.println(msg);
-//                        try {
-//                       //     out.println(Base64.getEncoder().encodeToString(RSAutils.encrypt(msg, key)));
-//                        } catch (NoSuchPaddingException | NoSuchAlgorithmException | BadPaddingException | IllegalBlockSizeException | InvalidKeyException e) {
-//                            e.printStackTrace();
-//                        }
+                        try {
+                            out.println(Base64.getEncoder().encodeToString(RSAutils.encrypt(msg, key)));
+                        } catch (NoSuchPaddingException | NoSuchAlgorithmException | BadPaddingException | IllegalBlockSizeException | InvalidKeyException e) {
+                            e.printStackTrace();
+                        }
                         out.flush();
                     }
                 }
